@@ -70,7 +70,8 @@ To use it, simply input the arguments and use `.predict(wav_path)` and it will r
 p = PyTorchPredictor("model/weights_best.pth", "model/configs.pth", chunk_dur=2)
 timestamp = p.predict("dataset/test/test.wav", plot=True)
 ```
-setting `plot=True` provides you with the diarization visualization.
+setting `plot=True` provides you with the diarization visualization like this
+![Visualized Diarization](./assets/diarization_visualized.png)
 
 If you would like to use OpenVINO, use `.to_onnx(fname, outdir)` to convert the model into onnx format.
 ```
